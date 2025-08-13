@@ -1,0 +1,24 @@
+{
+  "name": "biolink-mevn",
+  "version": "1.0.0",
+  "scripts": {
+    "install": "cd server && npm install && cd .. && cd client && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm install && npm run build && cd .. && cd server && npm install && npm run build",
+    "start": "node server/dist/server/src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.2.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.17.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.3"
+  }
+}
